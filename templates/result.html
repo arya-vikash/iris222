@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title><title>Iris Flower Prediction</title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style>
+        .cover{
+            width: 80vw;
+        }
+        .iris_img{
+            height: 300px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body bgcolor=#eff>
+
+    <div class="container">
+        <h1 align='center'>  PREDICTION :  </h1>
+        
+        {%if data == 0%}
+        <div class="row">
+            <div class="col-6">
+                <h1>Iris-setosa</h1>  
+                <img class="iris_img" src='static\setosa.jpg' alt="flower">
+                <p>Iris setosa, the bristle-pointed iris, is a species of flowering plant in the genus Iris of the family Iridaceae,
+                     it belongs the subgenus Limniris and the series Tripetalae. </p>
+            </div>
+        </div>
+
+        {%elif data==1%}
+        <div class="col-6">
+            <h1>Iris-versicolor</h1>
+            <img class="iris_img" src='static\versicolor.jpg' alt="flower">
+            <p>Iris versicolor is also commonly known as the blue flag, harlequin blueflag, larger blue flag, northern blue flag, 
+                and poison flag, plus other variations of these names, and in Britain and Ireland as purple iris. </p>    
+        </div>
+        
+        {%else%}
+        <div class="row">
+            <div class="col-6">
+                <h1>Iris-virginica</h1>
+                <img class="iris_img" src='static\virginica.jpg' alt="flower">
+            </div>
+            <div class="col-6 ">
+                <div style="width: 40vw">
+                    <span>Iris virginica, with the common name Virginia iris, is a perennial species of flowering plant, native to eastern North America. 
+                        It is common along the coastal plain from Florida to Georgia in the Southeastern United States. </span></div>
+            </div>
+        </div>
+        
+        {%endif%}
+
+            <br><br>
+        <a href='/'>go back to home page</a>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
